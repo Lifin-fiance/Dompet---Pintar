@@ -1,2 +1,2 @@
-# Dompet---Pintar
-Bismillah suksess game nya
+# life-simulation-game
+
