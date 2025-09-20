@@ -1,0 +1,262 @@
+/* Menjaga font tetap tebal dan jelas */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animasi untuk perubahan statistik */
+.stat-increase {
+    animation: increase-anim 0.5s ease-out;
+}
+.stat-decrease {
+    animation: decrease-anim 0.5s ease-out;
+}
+.stat-value-increase {
+    animation: value-increase-anim 0.5s ease-out;
+}
+.stat-value-decrease {
+    animation: value-decrease-anim 0.5s ease-out;
+}
+
+@keyframes increase-anim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); background-color: rgba(74, 222, 128, 0.3); }
+    100% { transform: scale(1); }
+}
+
+@keyframes decrease-anim {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); background-color: rgba(248, 113, 113, 0.3); }
+    100% { transform: scale(1); }
+}
+
+@keyframes value-increase-anim {
+    0% { color: inherit; }
+    50% { color: #16a34a; transform: scale(1.1); }
+    100% { color: inherit; }
+}
+
+@keyframes value-decrease-anim {
+    0% { color: inherit; }
+    50% { color: #dc2626; transform: scale(0.9); }
+    100% { color: inherit; }
+}
+
+
+/* Gaya untuk scrollbar internal di area aksi */
+.mobile-actions-scroll {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Scrolling lebih mulus di iOS */
+}
+
+/* Kustomisasi scrollbar agar tidak terlalu mencolok */
+.mobile-actions-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mobile-actions-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mobile-actions-scroll::-webkit-scrollbar-thumb {
+    background-color: #ff6b6b;
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+
+/* ======================================================= */
+/* ====== ATURAN BARU UNTUK DESKTOP & TABLET SANGAT COMPACT ====== */
+/* ======================================================= */
+@media (min-width: 768px) {
+    /* Kurangi padding utama container game */
+    .relative.bg-white {
+        padding: 1.5rem !important;
+        padding-top: 2rem !important;
+    }
+
+    /* Kurangi jarak antar panel */
+    #game-container {
+        gap: 1rem;
+    }
+
+    /* Target panel kanan untuk memaksimalkan ruang */
+    .md\:w-2\/3.flex.flex-col {
+        justify-content: flex-start; /* Ratakan ke atas */
+    }
+
+    /* Kurangi jarak judul game */
+    .md\:w-2\/3 > .text-center {
+        margin-bottom: 1rem;
+    }
+    .md\:w-2\/3 > .text-center > p {
+        margin-bottom: 0 !important;
+    }
+
+    /* KECILKAN 6 KOTAK STATUS */
+    #stats {
+        margin-bottom: 1rem !important;
+        gap: 0.75rem !important; /* Kurangi jarak antar kotak */
+    }
+    #stats .relative {
+        padding-top: 20px !important;
+    }
+    #stats .absolute > div {
+        width: 50px !important; /* Kecilkan ikon */
+        height: 50px !important;
+    }
+    #stats .absolute img {
+        width: 28px !important;
+    }
+    #stats > div > div:last-child {
+        padding-top: 30px !important;
+        padding-bottom: 0.5rem !important; /* Kurangi padding bawah */
+    }
+    #stats .text-2xl {
+        font-size: 1.1rem; /* Kecilkan font nilai */
+    }
+
+    /* Kurangi jarak pada kotak pesan */
+    #message-box {
+        margin-bottom: 1rem !important;
+        min-height: 40px !important; /* Perkecil tinggi minimum */
+        padding: 0.5rem !important;
+    }
+
+    /* Kurangi jarak dan kecilkan area aksi */
+    #actions {
+        margin-bottom: 1rem !important;
+        flex-grow: 0; /* Hapus flex-grow agar tidak memakan ruang */
+    }
+    #actions h2 {
+        font-size: 1.1rem; /* Kecilkan judul aksi */
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* Naikkan tombol Next Year */
+    #nextYearBtn {
+        margin-top: 0 !important;
+    }
+}
+
+
+/* ======================================================= */
+/* ====== ATURAN UNTUK MOBILE YANG SANGAT COMPACT ====== */
+/* ======================================================= */
+@media (max-width: 767px) {
+    /* Beri ruang bawah agar konten tidak tertutup tombol float */
+    body {
+        padding-bottom: 90px;
+    }
+
+    /* Kurangi padding utama container game */
+    .relative.bg-white {
+        padding: 0.75rem !important;
+        padding-top: 1rem !important;
+    }
+
+    /* Atur ulang tata letak utama */
+    #game-container {
+        flex-direction: column;
+        gap: 0.5rem; /* Jarak antara panel kiri dan kanan */
+    }
+
+    /* Panel Kiri (Gambar & Status) */
+    .md\:w-1\/3 {
+        order: 1;
+    }
+    
+    /* Panel Kanan (Stats & Aksi) */
+    .md\:w-2\/3 {
+        order: 2;
+        padding-left: 0 !important;
+        border-left: none !important;
+        display: flex;
+        flex-direction: column; /* Mengaktifkan flexbox untuk mengatur urutan */
+    }
+
+    /* === Panel Kiri (Gambar & Status) === */
+    #stage-display > h2 { display: none; } /* Sembunyikan "Level Kamu Sekarang" */
+
+    #stage-image {
+        width: 45% !important;
+        max-width: 150px !important;
+        margin-bottom: 0.5rem !important; /* Jarak bawah gambar */
+    }
+    #stage-name { font-size: 1rem; margin-bottom: 0.25rem; } /* Kecilkan nama stage */
+    #status-display { margin-top: 0 !important; }
+
+    /* === Panel Kanan (Stats & Aksi) === */
+
+    /* 1. Sembunyikan judul game "Dompet Pintar" di mobile */
+    .md\:w-2\/3 > .text-center {
+        display: none;
+    }
+
+    /* 2. Atur ulang urutan elemen di panel kanan */
+    #stats { order: 1; }
+    #message-box { order: 2; }
+    #actions { order: 3; }
+    #nextYearBtn { order: 4; }
+    #financial-summary { display: none; } /* Sembunyikan ringkasan keuangan untuk layout super compact */
+
+    /* 3. Atur Stats menjadi sangat pendek dan compact */
+    #stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin-bottom: 1rem !important;
+    }
+    #stats .relative {
+        padding-top: 20px !important;
+        display: flex;
+        align-items: flex-end;
+    }
+    #stats .absolute {
+        display: flex;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #stats .absolute > div {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    #stats .absolute img {
+        width: 20px !important;
+    }
+
+    #stats > div > div:last-child {
+        padding: 18px 5px 5px 5px !important;
+        min-height: 0 !important;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #stats .text-2xl { font-size: 0.85rem; line-height: 1; }
+    #stats .text-sm { font-size: 0.6rem; line-height: 1.1; margin-top: 2px; }
+
+    /* 4. Atur kotak pesan dan area aksi */
+    #message-box { margin-bottom: 0.75rem !important; padding: 0.5rem !important; }
+    #actions { margin-bottom: 0 !important; }
+    #actions h2 { font-size: 1rem; margin-bottom: 0.5rem !important; }
+    #action-buttons { gap: 0.4rem; }
+    #action-buttons button { padding: 6px 8px; font-size: 0.7rem; }
+
+    /* 5. Atur Tombol Melayang */
+    #nextYearBtn {
+        position: fixed;
+        bottom: 16px;
+        left: 5%;
+        width: 90%;
+        z-index: 100;
+        
+        transform: none !important;
+        box-shadow: 0 6px 0 0 #D44F4F;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    #nextYearBtn:active {
+        transform: translateY(3px) !important;
+        box-shadow: 0 3px 0 0 #D44F4F !important;
+    }
+}

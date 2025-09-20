@@ -1,0 +1,21 @@
+{
+    "Taxes": {
+        "description": "Pajak Penghasilan",
+        "type": "recurring",
+        "amount": "15% of salary",
+        "condition": "gameState.career && gameState.career !== 'Unemployed'"
+    },
+    "ChildCare": {
+        "description": "Biaya Perawatan Anak",
+        "type": "recurring",
+        "amount": 12000000,
+        "per": "child",
+        "condition": "gameState.children.length > 0"
+    },
+    "MarriageCosts": {
+        "description": "Biaya Hidup Berkeluarga",
+        "type": "recurring",
+        "amount": 6000000,
+        "condition": "gameState.isMarried"
+    }
+}

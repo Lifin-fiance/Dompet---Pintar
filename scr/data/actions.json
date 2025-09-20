@@ -1,0 +1,86 @@
+{
+    "Kindergarten": [
+        { "name": "Bermain dengan Teman", "cost": 0, "energyCost": 20, "effect": { "fun": 10, "relationships": 5 } },
+        { "name": "Beli Buku Gambar", "cost": 50000, "energyCost": 10, "effect": { "intelligence": 5 } }
+    ],
+    "Elementary School": [
+        { "name": "Ikut Tim Olahraga", "cost": 100000, "energyCost": 30, "effect": { "health": 10, "fun": 5, "relationships": 5 } },
+        { "name": "Belajar dengan Teman", "cost": 0, "energyCost": 25, "effect": { "intelligence": 5, "relationships": 5 } },
+        { "name": "Nonton TV", "cost": 0, "energyCost": 10, "effect": { "fun": 5 } }
+    ],
+    "Middle School": [
+        { "name": "Pergi ke Pesta", "cost": 100000, "energyCost": 40, "effect": { "fun": 15, "relationships": 10, "health": -5 } },
+        { "name": "Kerja Paruh Waktu", "cost": 0, "energyCost": 50, "effect": { "money": 500000, "fun": -5 } },
+        { "name": "Belajar Giat", "cost": 0, "energyCost": 30, "effect": { "intelligence": 10, "fun": -5 } },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJunkFood" }
+    ],
+    "High School": [
+        { "name": "Fokus pada Pelajaran", "cost": 0, "energyCost": 40, "effect": { "intelligence": 15, "fun": -10 } },
+        { "name": "Kerja Paruh Waktu", "cost": 0, "energyCost": 60, "effect": { "money": 1000000, "fun": -5 } },
+        { "name": "Jalan-jalan dengan Teman", "cost": 150000, "energyCost": 30, "effect": { "fun": 20, "relationships": 15 } },
+        { "name": "Pergi ke Gym", "special": "goToGym" },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJuntkFood" }
+    ],
+    "College": [
+        { "name": "Jurusan Ilmu Komputer", "cost": 0, "energyCost": 100, "effect": { "intelligence": 20, "fun": -10 }, "career": "Software Developer" },
+        { "name": "Jurusan Pra-Kedokteran", "cost": 0, "energyCost": 100, "effect": { "intelligence": 25, "fun": -15 }, "career": "Doctor" },
+        { "name": "Jurusan Seni Rupa", "cost": 0, "energyCost": 100, "effect": { "intelligence": 15, "fun": -5 }, "career": "Artist" }
+    ],
+    "College_Majored": [
+        { "name": "Belajar untuk Ujian", "cost": 0, "energyCost": 50, "effect": { "intelligence": 15, "fun": -10 } },
+        { "name": "Pergi ke Pesta Kampus", "cost": 200000, "energyCost": 40, "effect": { "fun": 20, "relationships": 10, "health": -5 } },
+        { "name": "Ikut Kelompok Belajar", "cost": 0, "energyCost": 30, "effect": { "intelligence": 10, "relationships": 5 } },
+        { "name": "Pergi ke Gym", "special": "goToGym" },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJunkFood" }
+    ],
+    "Software Developer": [
+        { "name": "Kerjakan Proyek Sampingan", "cost": 0, "energyCost": 50, "effect": { "money": 5000000, "intelligence": 10, "fun": -10 } },
+        { "name": "Hadir di Konferensi Teknologi", "cost": 3000000, "energyCost": 30, "effect": { "relationships": 10, "intelligence": 5 } },
+        { "name": "Minta Promosi", "special": "seekPromotion" },
+        { "name": "Ambil Cuti Liburan", "special": "takeVacation" },
+        { "name": "Pergi ke Gym", "special": "goToGym" },
+        { "name": "Pergi ke Kasino", "special": "gamble" },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJunkFood" }
+    ],
+    "Doctor": [
+        { "name": "Ambil Jam Lembur", "cost": 0, "energyCost": 70, "effect": { "money": 10000000, "health": -15, "fun": -15 } },
+        { "name": "Hadir di Konferensi Medis", "cost": 5000000, "energyCost": 40, "effect": { "relationships": 10, "intelligence": 10 } },
+        { "name": "Minta Promosi", "special": "seekPromotion" },
+        { "name": "Ambil Cuti Liburan", "special": "takeVacation" },
+        { "name": "Pergi ke Gym", "special": "goToGym" },
+        { "name": "Pergi ke Kasino", "special": "gamble" },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJunkFood" }
+    ],
+    "Artist": [
+        { "name": "Jual Karyamu", "cost": 0, "energyCost": 40, "effect": { "money": 2000000, "fun": 10 } },
+        { "name": "Kunjungi Museum", "cost": 50000, "energyCost": 20, "effect": { "intelligence": 5, "fun": 10 } },
+        { "name": "Minta Promosi", "special": "seekPromotion" },
+        { "name": "Ambil Cuti Liburan", "special": "takeVacation" },
+        { "name": "Pergi ke Gym", "special": "goToGym" },
+        { "name": "Pergi ke Kasino", "special": "gamble" },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJunkFood" }
+    ],
+    "Unemployed": [
+        { "name": "Kerja Serabutan", "cost": 0, "energyCost": 60, "effect": { "money": 1000000, "fun": -10 } },
+        { "name": "Cari Pekerjaan Lebih Baik", "special": "findJob" },
+        { "name": "Nonton TV", "cost": 0, "energyCost": 10, "effect": { "fun": 5 } },
+        { "name": "Ambil Cuti Liburan", "special": "takeVacation" },
+        { "name": "Pergi ke Gym", "special": "goToGym" },
+        { "name": "Pergi ke Kasino", "special": "gamble" },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJunkFood" }
+    ],
+    "Retirement": [
+        { "name": "Keliling Dunia", "cost": 25000000, "energyCost": 100, "effect": { "fun": 50, "relationships": 20 } },
+        { "name": "Jadi Relawan", "cost": 0, "energyCost": 30, "effect": { "relationships": 10, "fun": 5 } },
+        { "name": "Berkebun", "cost": 0, "energyCost": 20, "effect": { "fun": 10 } },
+        { "name": "Nonton TV", "cost": 0, "energyCost": 10, "effect": { "fun": 5 } }
+    ],
+    "Cashier": [
+        { "name": "Kerja Lembur", "cost": 0, "energyCost": 50, "effect": { "money": 1000000, "fun": -10 } },
+        { "name": "Minta Promosi", "special": "seekPromotion" },
+        { "name": "Ambil Cuti Liburan", "special": "takeVacation" },
+        { "name": "Pergi ke Gym", "special": "goToGym" },
+        { "name": "Pergi ke Kasino", "special": "gamble" },
+        { "name": "Makan Makanan Cepat Saji", "special": "eatJunkFood" }
+    ]
+}

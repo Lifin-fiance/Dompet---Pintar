@@ -1,0 +1,9 @@
+{
+    "Kindergarten": { "displayName": "Taman Kanak-Kanak", "minAge": 5, "maxAge": 6, "image": "scr/assets/images/kindergarten.png" },
+    "Elementary School": { "displayName": "Sekolah Dasar", "minAge": 7, "maxAge": 12, "image": "scr/assets/images/elementary.png" },
+    "Middle School": { "displayName": "Sekolah Menengah Pertama", "minAge": 13, "maxAge": 15, "image": "scr/assets/images/middleschool.png" },
+    "High School": { "displayName": "Sekolah Menengah Atas", "minAge": 16, "maxAge": 18, "image": "scr/assets/images/highschool.png" },
+    "College": { "displayName": "Kuliah", "minAge": 19, "maxAge": 22, "image": "scr/assets/images/college.png" },
+    "Working Adult": { "displayName": "Dewasa Bekerja", "minAge": 23, "maxAge": 64, "image": "scr/assets/images/developer.png" },
+    "Retirement": { "displayName": "Pensiun", "minAge": 65, "maxAge": 79, "image": "scr/assets/images/retirement.png" }
+}
