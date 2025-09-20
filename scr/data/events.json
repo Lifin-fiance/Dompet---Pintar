@@ -1,9 +1,0 @@
-[
-    { "message": "Kamu sakit dan harus istirahat.", "effect": { "health": -10 }, "chance": 0.1 },
-    { "message": "Kamu memenangkan lotre kecil!", "effect": { "money": 5000000 }, "chance": 0.05 },
-    { "message": "Kamu memiliki hari yang sangat berkesan dengan seorang teman!", "effect": { "fun": 10, "relationships": 5 }, "chance": 0.15 },
-    { "message": "Kamu mempelajari sesuatu yang baru secara tak terduga!", "effect": { "intelligence": 5 }, "chance": 0.15 },
-    { "message": "Kamu bertengkar dengan seorang teman.", "effect": { "relationships": -10 }, "chance": 0.1 },
-    { "message": "Kamu menemukan uang Rp200.000 di jalan!", "effect": { "money": 200000 }, "chance": 0.1 },
-    { "message": "Kamu merasakan ledakan inspirasi yang tiba-tiba.", "effect": { "fun": 10 }, "chance": 0.1 }
-]
